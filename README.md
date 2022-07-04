@@ -72,7 +72,7 @@ Setting the `FLASK_APP` variable to `app.py` directs flask to use the this file 
 
 You can run this API locally at the default `http://127.0.0.1:5000/`
 
-Login url `https://casting-agency-full-stack.us.auth0.com/authorize?audience=casting-agency-full-stack&response_type=token&client_id=05PDUxQbk8GV2eLEfOJlsC58sDxefb1D&redirect_uri=http://localhost:5000/callback`
+Login url `https://iam-udacity.us.auth0.com/authorize?audience=casting-agency&response_type=token&client_id=ssNIYvCzisVqeh119TTXMDyEZ98EUN11&redirect_uri=http://localhost:5000/callback`
 
 ## Testing
 
@@ -101,7 +101,7 @@ python test_app.py
 
 ## Deployment
 
-The app is deployed on Heroku [https://capstonealisha.herokuapp.com/](https://capstonealisha.herokuapp.com/)
+The app is deployed on Heroku [https://alisha-test-app.herokuapp.com/](https://alisha-test-app.herokuapp.com/)
 
 Auth0 information for endpoints that require authentication can be found in setup.sh
 
@@ -109,7 +109,7 @@ Auth0 information for endpoints that require authentication can be found in setu
 
 ### Getting Started
 
-- Base URL: [https://capstonealisha.herokuapp.com/](https://casting-agency-full-stack.herokuapp.com/)
+- Base URL: [https://alisha-test-app.herokuapp.com/](https://alisha-test-app.herokuapp.com/)
 - Authentication: This app has 3 users. Each has his own token which are provided in `setup.sh` file. Details about each user privilege are provided below.
 
 ### Users
@@ -159,7 +159,7 @@ This app has 3 users. each user has his own privileges.
 7. Test your endpoints with [Postman](https://getpostman.com). 
     - Register 3 users - assign the Associate role to one, Director role to the second and Producer role to the other.
     - Sign into each account and make note of the JWT.
-    - Import the postman collection `capstone.postman_collection.json`
+    - Import the postman collection `Heroku Capstone.postman_collection.json`
     - Right-clicking the collection folder for Associate,Director and Producer, navigate to the authorization tab, and including the JWT in the token field (you should have noted these JWTs).
     - Run the collection.
     - Export the collection overwriting the one we've included so that we have proper JWTs
@@ -171,9 +171,9 @@ I used `Postman Collections` to test all my Endpoints for expected behaviour & c
 To execute the tests, follow these steps:
 
 1. Install [Postman](https://www.getpostman.com/downloads/)
-2. Download the json file from this repository (`capstone.postman_collection.json`)
+2. Download the json file from this repository (`Heroku Capstone.postman_collection.json`)
 3. Open `Postman` and click on "Import" on the top-left corner
-4. Select `capstone.postman_collection.json`
+4. Select `Heroku Capstone.postman_collection.json`
 5. Once uploaded, Click on "Runner"
 
 ### Endpoints
@@ -198,10 +198,10 @@ Following is the demonstration of each endpoint.
 		{
         "actors": [
             {
-            "age": "26",
+            "age": "28",
             "gender": "male",
-            "id": 8,
-            "name": "Kiki"
+            "id": 4,
+            "name": "Kiran"
             }
         ],
 		  "success": true
@@ -217,9 +217,9 @@ Following is the demonstration of each endpoint.
 		{
         "movies": [
             {
-            "id": 7,
-            "release": "2019",
-            "title": "actor1"
+            "id": 1,
+            "release": "2022",
+            "title": "Raju"
             }
         ],
         "success": true
@@ -231,7 +231,7 @@ Following is the demonstration of each endpoint.
 	- Request Argument :  
     ```
         {
-        "name":"Reyan", 
+        "name":"Roger", 
         "age":20, 
         "gender":"male"
         }
@@ -244,7 +244,7 @@ Following is the demonstration of each endpoint.
             "age": "20",
             "gender": "male",
             "id": 51,
-            "name": "Reyan"
+            "name": "Roger"
         },
         "success": true
         }
@@ -255,7 +255,7 @@ Following is the demonstration of each endpoint.
 	- Request Argument : 
     ```
         {
-        "title":"TheEnd2020", 
+        "title":"2022", 
         "release":2021
         }
     ```
@@ -264,8 +264,8 @@ Following is the demonstration of each endpoint.
 		```
 		{
         "actor": {
-            "id": 36,
-            "title":"TheEnd2020", 
+            "id": 30,
+            "title":"2022", 
             "release":2021
         },
         "success": true
@@ -287,8 +287,8 @@ Following is the demonstration of each endpoint.
         "actor": {
             "age": "21",
             "gender": "male",
-            "id": 51,
-            "name": "Reyan"
+            "id": 40,
+            "name": "Raju"
         },
         "success": true
         }
@@ -299,7 +299,7 @@ Following is the demonstration of each endpoint.
 	- Request Argument : 
     ```
         {
-        "release":2022
+        "release":2023
         }
     ```
 	- Returns : JSON response containing request status
@@ -307,8 +307,8 @@ Following is the demonstration of each endpoint.
 		```
 		{
         "actor": {
-            "id": 36,
-            "title":"TheEnd2020", 
+            "id": 30,
+            "title":"2022", 
             "release":2022
         },
         "success": true
@@ -322,7 +322,7 @@ Following is the demonstration of each endpoint.
 	- example
 		```
 		{
-        "id": 9,
+        "id": 4,
         "success": true
         }
 		```
@@ -334,7 +334,7 @@ Following is the demonstration of each endpoint.
 	- example
 		```
 		{
-        "id": 10,
+        "id": 1,
         "success": true
         }
 		```

@@ -62,7 +62,7 @@ class CapstoneTest(unittest.TestCase):
         self.assertEqual(body['success'], True)
 
     def test_404_wrong_endpoint_get_Movies(self):
-        res = self.client().get('/movi', headers={
+        res = self.client().get('/move', headers={
             "Authorization": 'bearer '+self.token_assistant})
         body = json.loads(res.data)
         self.assertEqual(res.status_code, 404)
@@ -79,7 +79,7 @@ class CapstoneTest(unittest.TestCase):
         self.assertEqual(ques, None)
 
     def test_404_Wrong_ID_delete_Actor(self):
-        res = self.client().delete('/actors/1000', headers={
+        res = self.client().delete('/actors/100', headers={
             "Authorization": 'bearer '+self.token_producer})
         body = json.loads(res.data)
         self.assertEqual(res.status_code, 404)
@@ -103,7 +103,7 @@ class CapstoneTest(unittest.TestCase):
         self.assertEqual(ques, None)
 
     def test_404_Wrong_ID_delete_Movies(self):
-        res = self.client().delete('/movies/1000', headers={
+        res = self.client().delete('/movies/100', headers={
             "Authorization": 'bearer '+self.token_producer})
         body = json.loads(res.data)
         self.assertEqual(res.status_code, 404)
@@ -134,7 +134,7 @@ class CapstoneTest(unittest.TestCase):
             '/actors',
             json={
                 "name": random_key(5),
-                "age": "10",},
+                "age": "1",},
             headers={"Authorization": 'bearer '+self.token_director}
             )
         body = json.loads(res.data)
@@ -146,7 +146,7 @@ class CapstoneTest(unittest.TestCase):
             '/actors',
             json={
                 "name": random_key(5),
-                "age": "10",
+                "age": "1",
                 "gender": "Male"},
             headers={"Authorization": 'bearer '+self.token_assistant}
             )
@@ -159,7 +159,7 @@ class CapstoneTest(unittest.TestCase):
             '/movies',
             json={
                 "title": "Movie"+random_key(5),
-                "release": "2010"},
+                "release": "2012"},
             headers={"Authorization": 'bearer '+self.token_producer}
             )
         body = json.loads(res.data)
@@ -171,7 +171,7 @@ class CapstoneTest(unittest.TestCase):
             '/movies',
             json={
                 "titletr": random_key(5),
-                "release": "2010"},
+                "release": "2012"},
             headers={"Authorization": 'bearer '+self.token_producer}
             )
         body = json.loads(res.data)
@@ -183,7 +183,7 @@ class CapstoneTest(unittest.TestCase):
             '/movies',
             json={
                 "title": random_key(5),
-                "release": "2010"},
+                "release": "2012"},
             headers={"Authorization": 'bearer '+self.token_assistant}
             )
         body = json.loads(res.data)
@@ -196,7 +196,7 @@ class CapstoneTest(unittest.TestCase):
             '/movies/'+ str(movie.id),
             json={
                 "title": "Title"+random_key(5),
-                "release": "2010"},
+                "release": "2012"},
             headers={"Authorization": 'bearer '+self.token_producer}
             )
         body = json.loads(res.data)
@@ -208,7 +208,7 @@ class CapstoneTest(unittest.TestCase):
             '/movies/1000',
             json={
                 "title": random_key(5),
-                "release": "2010"},
+                "release": "2012"},
             headers={"Authorization": 'bearer '+self.token_producer}
             )
         body = json.loads(res.data)
@@ -217,10 +217,10 @@ class CapstoneTest(unittest.TestCase):
 
     def test_401_Unauthorized_Permission_update_Movies(self):
         res = self.client().patch(
-            '/movies/1000',
+            '/movies/100',
             json={
                 "title": random_key(5),
-                "release": "2010"},
+                "release": "2012"},
             headers={"Authorization": 'bearer '+self.token_assistant}
             )
         body = json.loads(res.data)
@@ -233,7 +233,7 @@ class CapstoneTest(unittest.TestCase):
             '/actors/'+ str(actor.id),
             json={
                 "name": "Actor"+random_key(5),
-                "age": "10",
+                "age": "1",
                 "gender": "Male"},
             headers={"Authorization": 'bearer '+self.token_producer}
             )
@@ -246,7 +246,7 @@ class CapstoneTest(unittest.TestCase):
             '/actors/1000',
             json={
                 "name": random_key(5),
-                "age": "10",
+                "age": "1",
                 "gender": "Male"},
             headers={"Authorization": 'bearer '+self.token_producer}
             )
