@@ -225,7 +225,7 @@
 							"raw": "{\n   \"name\":\"actor182\", \n   \"age\":372, \n   \"gender\":\"male\"\n}"
 						},
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/actors/2",
+							"raw": "https://alisha-test-app.herokuapp.com/actors/3",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -234,7 +234,7 @@
 							],
 							"path": [
 								"actors",
-								"2"
+								"3"
 							]
 						}
 					},
@@ -269,7 +269,7 @@
 							"raw": "{\n   \"title\":\"actor1\", \n   \"release\":2019\n}"
 						},
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/movies/2",
+							"raw": "https://alisha-test-app.herokuapp.com/movies/1",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -278,7 +278,7 @@
 							],
 							"path": [
 								"movies",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -309,7 +309,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/actors/2",
+							"raw": "https://alisha-test-app.herokuapp.com/actors/11",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -318,7 +318,7 @@
 							],
 							"path": [
 								"actors",
-								"2"
+								"11"
 							]
 						}
 					},
@@ -349,7 +349,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/movies/2",
+							"raw": "https://alisha-test-app.herokuapp.com/movies/3",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -358,7 +358,7 @@
 							],
 							"path": [
 								"movies",
-								"2"
+								"3"
 							]
 						}
 					},
@@ -762,10 +762,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"name\":\"actor182\", \n   \"age\":372, \n   \"gender\":\"male\"\n}"
+							"raw": "{\n   \"name\":\"actor1\", \n   \"age\":37, \n   \"gender\":\"male\"\n}"
 						},
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/actors/5",
+							"raw": "https://alisha-test-app.herokuapp.com/actors/4",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -774,7 +774,7 @@
 							],
 							"path": [
 								"actors",
-								"5"
+								"4"
 							]
 						}
 					},
@@ -805,7 +805,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/actors/5",
+							"raw": "https://alisha-test-app.herokuapp.com/actors/11",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -814,7 +814,7 @@
 							],
 							"path": [
 								"actors",
-								"5"
+								"11"
 							]
 						}
 					},
@@ -1108,7 +1108,7 @@
 							"raw": "{\n   \"title\":\"actor1\", \n   \"release\":2019\n}"
 						},
 						"url": {
-							"raw": "https://alisha-test-app.herokuapp.com/movies/3",
+							"raw": "https://alisha-test-app.herokuapp.com/movies/1",
 							"protocol": "https",
 							"host": [
 								"alisha-test-app",
@@ -1117,7 +1117,7 @@
 							],
 							"path": [
 								"movies",
-								"3"
+								"1"
 							]
 						}
 					},
@@ -1344,16 +1344,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlQxMEtFeG0wSWREdU5JOExJcUV5QSJ9.eyJpc3MiOiJodHRwczovL2lhbS11ZGFjaXR5LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNDMzODg0NTY2MjgzMjMwMzc1MSIsImF1ZCI6ImNhc3RpbmctYWdlbmN5IiwiaWF0IjoxNjU2MjQyNDM2LCJleHAiOjE2NTYzMTQ0MzYsImF6cCI6InNzTklZdkN6aXNWcWVoMTE5VFRYTUR5RVo5OEVVTjExIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyJdfQ.WHEUey3kz-LjWqzjp1TT1ElogRiRgPGWwivg-fhlBQkYXzUwMugKorypyH1AoD8JCm7F16MZCn8d4L5IcUTrzaTLAdNFiTR4LEPBhYvczNGqPla2YMrXiel7ZCmjGONyYQOyAXdYXKr-FRCQVrMlQ55F4gH_VNvnRW-CmVZnk_gP9z0o7UvExfak-rAJrzldMNVBvwbXt7pzFAKsFG9zqW48kBsa0y8O8JWB2jRU2fejPDPY80VvLIRTCb9RgjGNK4iNihg57hb8X16e-kkSvehHdgUnKgc_ZsJ3I4K3db6OEdTzm5OXv3KHLbUqkQHDUc46oiaXNmLigZ8UE5siwQ",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
