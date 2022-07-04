@@ -14,7 +14,8 @@ from flask_moment import Moment
 database_path = os.environ.get('SQLALCHEMY_DATABASE_URI')
 if not database_path:
     database_name = "castingagency"
-    database_path = "postgresql://postgres:password@localhost:5432/castingagency"
+    #database_path = "postgresql://postgres:password@localhost:5432/castingagency"
+    database_path = "postgres://yksarikszedlzu:e73cc9f76bc8f01f1a595a1ac06e14693e3a08d53c5daae29b342de83bacbe1d@ec2-23-23-151-191.compute-1.amazonaws.com:5432/d6rtvq6gd4b9gf"
 
 db = SQLAlchemy()
 moment = Moment()
