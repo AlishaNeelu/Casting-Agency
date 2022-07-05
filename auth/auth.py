@@ -59,7 +59,8 @@ def get_token_auth_header():
 #  Verifies and decodes the Auth0 JWTs
 def verify_decode_jwt(token):
     
-    jsonurl = urlopen(f'https://iam-udacity.us.auth0.com/.well-known/jwks.json')
+    #jsonurl = urlopen(f'https://iam-udacity.us.auth0.com/.well-known/jwks.json')
+    jsonurl = urlopen(f'https://{AUTH0_DOMAIN}/.well-known/jwks.json')
     jwks = json.loads(jsonurl.read())
     unverified_header = jwt.get_unverified_header(token)
     rsa_key = {}
@@ -86,7 +87,8 @@ def verify_decode_jwt(token):
                 rsa_key,
                 algorithms=ALGORITHMS,
                 audience='casting-agency',
-                issuer='https://iam-udacity.us.auth0.com/'
+                issuer='https://' + AUTH0_DOMAIN + '/'
+                #issuer='https://iam-udacity.us.auth0.com/'
             )
 
             return payload
